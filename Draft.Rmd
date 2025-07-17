@@ -1,0 +1,41 @@
+---
+title: "draft.Rmd"
+output: html_document
+date: "2025-05-30"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Age 6 
+```{r}
+install.packages("haven")
+library(haven)
+library(dplyr)
+
+
+file_path <- "~/Desktop/thesis/data/UKDA-6411-spss/spss/spss28/mcs4_parent_cm_interview.sav"
+file.exists(file_path)            # should return TRUE
+mcs4_p_cm <- read_sav(file_path)
+
+file_path <- "~/thesis/data/UKDA-6411-spss/spss/spss28/mcs4_parent_cm_interview.sav"
+file.exists(file_path)
+
+list.files("~/")                    # should show “Desktop” among others
+list.files("~/Desktop")             # should show “thesis” if that’s where it is
+list.files("~/Desktop/thesis/data") # s
+mcs4_p_cm <- read_sav(file_path)
+
+var <- mcs4_p_cm$DPDISM00 
+
+
+
+list.files("~/")          # should list folders in your home
+list.files("~/Desktop")   # does “thesis” appear here?
+
+
+
+```
+
